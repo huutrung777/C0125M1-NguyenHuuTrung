@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời Khóa Biểu</title>
+</head>
+<style> 
+th,td{
+    border: 1px solid black;
+    text-align: center;
+    height: 22px;
+    width: 100px;
+}
+    
+</style>
+<body>
+    <h1 style="margin-left: 160px;">Thời Khóa Biểu</h1>
+    <header style="display: flex;">
+        <div class="left" style="color: blue;">
+            <p>Lớp:T09081</p>
+            <p>Giáo viên:KhoaNV</p>
+            <p>Phòng Học:Class3/Lab3</p>
+            </div>
+            <div class="right" style="margin-left: 250px; color: blue;">
+                <p>Thời gian học:13h30</p>
+                <p>Ngày học:Thứ 3,5,7</p>
+            </div>
+
+    </header>
+    
+    
+    
+   <table style="border-collapse: collapse;">
+    <tr>
+        <th ></th>
+        <th></th>
+        <th></th>
+        <th style="background-color: yellow;">Thứ 3</th>
+        <th style="background-color: yellow;">Thứ 5</th>
+        <th style="background-color: yellow;">Thứ 7</th>
+    </tr>
+    <tr style="background-color: orange;">
+        <th>Tuần</th>
+        <th>Ngày bắt đầu</th>
+        <th>Ngày kết thúc</th>
+        <th></th>
+        <th>Môn Học</th>
+        <th></th>
+        
+    </tr>
+    <tr>
+        <td>01</td>
+        <td>01/09/2009</td>
+        <td>05/09/2009</td>
+        <td>CF - T1, L1</td>
+        <td>CF - T2, L2</td>
+        <td>CF - T3, L3</td>
+    </tr>
+    <tr>
+        <td>02</td>
+        <td>08/09/2009</td>
+        <td>12/09/2009</td>
+        <td>CF - T4, L4</td>
+        <td>CF - Written Test</td>
+        <td>C - T1, L1</td>
+    </tr>
+    <tr>
+        <td>03</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+</table>
+   </table>
+<button onclick="changeback('Bạn đã thích')">Thích</button>
+    
+</body>
+<script>
+    function changeback(){
+        let LikeBtn =document.getElementById("Like-btn");
+        LikeBtn.style.color="blue";
+        LikeBtn.innerText="Đã thích";
+
+
+
+    }
+</script>
+
+</html>
