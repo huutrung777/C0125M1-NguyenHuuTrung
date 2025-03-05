@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ function demSoAm(arr){
+let SoAm=0;
+for(let i=0;i<arr.length;i++){
+  if(arr[i]<0){
+    SoAm++;
+  }
+}
+return SoAm;
+
+
+
+ }
+ let nhap=[-1,4,-2,-3,-4,-5,-6, -7, -8, -9];
+ console.log(`số âm là: ${nhap} , có:${demSoAm(nhap)} số âm`);
+</script>
+
+</body>
+</html>

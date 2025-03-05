@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2-->
+<!--Viết chương trình khởi tạo một mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.-->
+<script>
+    function timSoLonNhat(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+    let mangSoNguyen = [3, 7, 2, 9, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    let soLonNhat = timSoLonNhat(mangSoNguyen);
+    console.log("Số lớn nhất trong mảng là:", soLonNhat);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function removeValue(arr, v) {
+    let index = arr.indexOf(v);
+    if (index !== -1) {
+      for (let i = index; i < arr.length - 1; i++) {
+        arr[i] = arr[i + 1];
+      }
+      arr[arr.length - 1] = 0; // Gán 0 cho phần tử cuối cùng
+      console.log(`Mảng sau khi xóa ${v}:`, arr);
+    } else {
+      console.log(`${v} không tồn tại trong mảng.`);
+    }
+  }
+
+  // Khởi tạo hoặc nhập mảng
+  let arr = prompt("Nhập 10 số nguyên cách nhau bởi dấu cách:")
+          .split(" ")
+          .map(Number)
+          .slice(0, 10);
+
+  let v = parseInt(prompt("Nhập số nguyên V:"));
+  removeValue(arr, v);
+</script>
+
+</body>
+</html>

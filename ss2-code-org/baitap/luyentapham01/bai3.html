@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>So sánh hai số</title>
+</head>
+<body>
+<input type="number" id="num1" placeholder="Nhập số thứ nhất">
+<input type="number" id="num2" placeholder="Nhập số thứ hai">
+<button onclick="checkNumbers()">Kiểm tra</button>
+<p id="result"></p>
+
+  <script>
+    function compareNumbers(a, b) {
+      if (a > b) {
+        alert("Số thứ nhất lớn hơn số thứ hai!");
+      } else {
+        return a + b;
+      }
+    }
+
+    function checkNumbers() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+
+      let result = compareNumbers(num1, num2);
+      if (result !== undefined) {
+        document.getElementById("result").innerText = "Tổng: " + result;
+      }
+    }
+  </script>
+</body>
+
+</html>

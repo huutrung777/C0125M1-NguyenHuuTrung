@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3:-->
+<!--Viết chương trình khai báo một mảng ký tự và kích thước của mảng.-->
+
+<!--Yêu cầu: Đếm số ký tự số (0-9) trong mảng.-->
+<script>
+  let arr = ['a', '1', 'b', '3', 'c', '7', 'd', '9', 'e', '0'];
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= '0' && arr[i] <= '9') {
+      count++;
+    }
+  }
+
+  console.log("Số lượng ký tự số:", count);
+
+</script>
+
+</body>
+</html>

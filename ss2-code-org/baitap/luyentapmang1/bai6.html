@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function demsoam(arr){
+    let soam=0;
+    for(let i=0;i<arr.length;i++){
+      if(arr[i]<0){
+        soam++;
+      }
+
+    }
+    return soam;
+  }
+  function soV(arr,V){
+    for(let i=0;i<arr.length;i++){
+      if(arr[i]===V){
+        return `${V} is in the array`;
+
+
+      }else {
+        return `${V} is not in the array`;
+      }
+
+
+
+    }
+
+
+
+  }
+  let nhap=[-5, 3, -3, 7, 9, -12, 8, -1, 0];
+  console.log("số nguyên âm",demsoam(nhap));
+  let V=7;
+  console.log(soV(nhap,V));
+
+</script>
+
+</body>
+</html>
