@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function timsonho(a,b,c){
+    return Math.min(a,b,c);
+
+  }
+  let a= prompt("nhập")
+  let b= prompt("nhập")
+  let c= prompt("nhập")
+  if (isNaN(a) || isNaN(b) || isNaN(c)) {
+    alert("Vui lòng nhập số hợp lệ!");
+  } else {
+    let min = timsonho(a, b, c);
+    alert(`Số nhỏ nhất trong ba số ${a}, ${b}, ${c} là: ${min}`);
+  }
+</script>
+
+</body>
+</html>

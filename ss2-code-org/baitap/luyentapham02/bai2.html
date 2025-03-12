@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function tinhdientich(r){
+    return Math.PI * r^2;
+  }
+  function tinhchuvi(r){
+    return 2+Math.PI * r^2;
+  }
+  let bankinh=prompt("nhập");
+  let dientich=tinhdientich(bankinh);
+  let chuvi=tinhchuvi(bankinh);
+  console.log(`Bán kính là ${bankinh} Diện tích bằng ${tinhdientich(dientich)}`);
+  console.log(`Bán kính là ${bankinh} Chu vi bằng ${tinhchuvi(dientich)}`);
+</script>
+
+</body>
+</html>
