@@ -7,9 +7,17 @@
 <body>
 <script>
     // Bài 1: Chuyển từ độ C sang độ F.
-    let c=prompt("Nhập c")
-    let f=(c*9/5 + 32)
-    alert(f)
+    let c =prompt("nhập số")
+    let f;
+
+    if (c !== null && !isNaN(c)) {
+        f = (c * 9/5) + 32;
+        console.log(`${c}°C = ${f}°F`);
+    } else {
+        console.log("Vui lòng nhập một số hợp lệ!");
+    }
+
+
 </script>
 
 </body>

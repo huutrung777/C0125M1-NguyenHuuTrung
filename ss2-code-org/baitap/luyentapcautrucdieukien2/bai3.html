@@ -7,10 +7,13 @@
 <body>
 <!--Bài 3: Tính diện tích hình vuông khi biết cạnh a.-->
 <script>
-  let a=prompt("Nhập a");
-  let dthv=a*a
-  alert(dthv);
+    let a = prompt("Enter a number");
 
+    if (a > 0) {
+        console.log(`Diện tích hình vuông: ${a * a}`);
+    } else {
+        console.log("Vui lòng nhập một số dương!");
+    }
 </script>
 </body>
 </html>
