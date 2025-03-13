@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = Number(prompt("Nhập số:"));
+  if (isNaN(n) || n < 0) {
+    console.log("Số không hợp lệ! Vui lòng nhập một số nguyên không âm.");
+  } else {
+    let giaiThua = BigInt(1);
+    for (let i = 2; i <= n; i++) {
+      giaiThua *= BigInt(i);
+    }
+    console.log(`Giai thừa của ${n} là:`, giaiThua.toString());
+  }
+</script>
+
+</body>
+</html>

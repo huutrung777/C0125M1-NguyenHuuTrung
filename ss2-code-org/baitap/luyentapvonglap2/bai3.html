@@ -6,6 +6,64 @@
 </head>
 <body>
 <script>
+    function printTriangle1(n) {
+        for (let i = 1; i <= n; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += "*";
+            }
+            console.log(row);
+        }
+    }
+
+    function printTriangle2(n) {
+        for (let i = n; i >= 1; i--) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += "*";
+            }
+            console.log(row);
+        }
+    }
+
+    function printTriangle3(n) {
+        for (let i = 1; i <= n; i++) {
+            let row = "";
+            for (let j = 1; j <= n - i; j++) {
+                row += " ";
+            }
+            for (let k = 1; k <= i; k++) {
+                row += "*";
+            }
+            console.log(row);
+        }
+    }
+
+    function printTriangle4(n) {
+        for (let i = n; i >= 1; i--) {
+            let row = "";
+            for (let j = 1; j <= n - i; j++) {
+                row += " ";
+            }
+            for (let k = 1; k <= i; k++) {
+                row += "*";
+            }
+            console.log(row);
+        }
+    }
+    let size = 5;
+    console.log("Góc vuông dưới bên trái:");
+    printTriangle1(size);
+
+    console.log("\nGóc vuông trên bên trái:");
+    printTriangle2(size);
+
+    console.log("\nGóc vuông dưới bên phải:");
+    printTriangle3(size);
+
+    console.log("\nGóc vuông trên bên phải:");
+    printTriangle4(size);
+
 </script>
 
 </body>
