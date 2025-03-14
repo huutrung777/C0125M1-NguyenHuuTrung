@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function tinhLaiNganHang() {
+    let soTienGoc = parseFloat(prompt("Nhập số tiền gửi ban đầu (VND):"));
+    let soThang = parseInt(prompt("Nhập số tháng gửi:"));
+    let laiSuatThang = parseFloat(prompt("Nhập lãi suất hàng tháng (%):")) / 100;
+    if (isNaN(soTienGoc) || isNaN(soThang) || isNaN(laiSuatThang) || soTienGoc <= 0 || soThang <= 0 || laiSuatThang <= 0) {
+      alert("Vui lòng nhập thông tin hợp lệ!");
+      return;
+    }
+    let soTienCuoi = soTienGoc * Math.pow(1 + laiSuatThang, soThang);
+    soTienCuoi = Math.round(soTienCuoi);
+    alert(` Số tiền sau ${soThang} tháng là: ${soTienCuoi.toLocaleString()} VND`);
+  }
+  tinhLaiNganHang();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function tinhTienDien() {
+    let soKWh = prompt("Nhập số điện tiêu thụ:");
+
+    if (isNaN(soKWh) || soKWh < 0) {
+      alert("Vui lòng nhập số kWh hợp lệ!");
+      return;
+    }
+
+    let giaDien = [1728, 1786, 2074, 2612, 2919, 3015];
+    let bac = [50, 50, 100, 100, 100];
+    let tienDien = 0;
+
+    for (let i = 0; i < bac.length; i++) {
+      if (soKWh > 0) {
+        let soLuong = Math.min(soKWh, bac[i]);
+        tienDien += soLuong * giaDien[i];
+        soKWh -= soLuong;
+      }
+    }
+
+    if (soKWh > 0) {
+      tienDien += soKWh * giaDien[5];
+    }
+
+    alert(`Tổng tiền điện: ${tienDien.toLocaleString()} VND`);
+  }
+  tinhTienDien();
+
+</script>
+
+</body>
+</html>

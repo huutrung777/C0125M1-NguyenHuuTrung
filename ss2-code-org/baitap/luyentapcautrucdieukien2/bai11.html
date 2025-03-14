@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function tinhThueTNCN() {
+    let thuNhap =prompt("Nhập thu nhập chịu thuế (VND):");
+
+    if (isNaN(thuNhap) || thuNhap < 0) {
+      alert("Vui lòng nhập số tiền hợp lệ!");
+      return;
+    }
+
+    let mucThue = [5000000, 5000000, 5000000, 10000000, 20000000, 28000000];
+    let thueSuat = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35];
+    let thuePhaiNop = 0;
+
+    for (let i = 0; i < mucThue.length; i++) {
+      if (thuNhap > 0) {
+        let thuNhapTinhThue = Math.min(thuNhap, mucThue[i]);
+        thuePhaiNop += thuNhapTinhThue * thueSuat[i];
+        thuNhap -= thuNhapTinhThue;
+      }
+    }
+
+    if (thuNhap > 0) {
+      thuePhaiNop += thuNhap * thueSuat[6];
+    }
+
+    alert(`Tổng thuế thu nhập cá nhân phải nộp: ${thuePhaiNop.toLocaleString()} VND`);
+  }
+  tinhThueTNCN();
+
+</script>
+
+</body>
+</html>
