@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function countCharacter(arr, char) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === char) {
+        count++;
+      }
+    }
+
+    if (count > 0) {
+      return count;
+    } else {
+      return -1;
+    }
+  }
+  let characters = ['a', 'b', 'c', 'a', 'd', 'a', 'e'];
+
+  console.log(countCharacter(characters, 'a'));
+  console.log(countCharacter(characters, 'b'));
+  console.log(countCharacter(characters, 'z'));
+
+
+</script>
+
+</body>
+</html>

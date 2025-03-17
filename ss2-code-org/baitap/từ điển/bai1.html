@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển đơn giản</title>
+</head>
+<body>
+
+<h2>Tìm nghĩa của từ</h2>
+
+<label>Nhập từ tiếng Anh:</label>
+<input type="text" id="searchInput">
+<button onclick="searchWord()">Tìm</button>
+
+<p id="result"></p>
+
+<script>
+
+    const englishWords = ["apple", "banana", "orange", "grape", "melon"];
+    const vietnameseWords = ["quả táo", "quả chuối", "quả cam", "quả nho", "quả dưa hấu"];
+
+    function searchWord() {
+        let inputWord = document.getElementById("searchInput").value.trim().toLowerCase();
+        let index = englishWords.indexOf(inputWord);
+
+        if (index !== -1) {
+            document.getElementById("result").innerText = `Nghĩa của "${inputWord}" là "${vietnameseWords[index]}".`;
+        } else {
+            document.getElementById("result").innerText = "Không tìm thấy từ.";
+        }
+    }
+</script>
+
+</body>
+</html>
